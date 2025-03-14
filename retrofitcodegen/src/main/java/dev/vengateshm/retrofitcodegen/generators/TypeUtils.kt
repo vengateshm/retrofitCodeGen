@@ -1,4 +1,4 @@
-package dev.vengateshm.retrofit_code_gen.generators
+package dev.vengateshm.retrofitcodegen.generators
 
 import com.squareup.kotlinpoet.BOOLEAN
 import com.squareup.kotlinpoet.ClassName

@@ -1,4 +1,4 @@
-package dev.vengateshm.retrofit_code_gen.models
+package dev.vengateshm.retrofitcodegen.models
 
 import kotlinx.serialization.Serializable
 

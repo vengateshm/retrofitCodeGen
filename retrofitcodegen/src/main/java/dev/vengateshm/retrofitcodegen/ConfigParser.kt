@@ -1,6 +1,6 @@
-package dev.vengateshm.retrofit_code_gen
+package dev.vengateshm.retrofitcodegen
 
-import dev.vengateshm.retrofit_code_gen.models.Config
+import dev.vengateshm.retrofitcodegen.models.Config
 import kotlinx.serialization.json.Json
 
 fun parseConfig(json: String): Config {

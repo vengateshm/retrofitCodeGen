@@ -1,4 +1,4 @@
-package dev.vengateshm.retrofit_code_gen.generators
+package dev.vengateshm.retrofitcodegen.generators
 
 import com.squareup.kotlinpoet.AnnotationSpec
 import com.squareup.kotlinpoet.ClassName
@@ -8,7 +8,7 @@ import com.squareup.kotlinpoet.KModifier
 import com.squareup.kotlinpoet.ParameterSpec
 import com.squareup.kotlinpoet.STRING
 import com.squareup.kotlinpoet.TypeSpec
-import dev.vengateshm.retrofit_code_gen.models.Config
+import dev.vengateshm.retrofitcodegen.models.Config
 
 object ApiGenerator {
     fun generateRetrofitInterface(

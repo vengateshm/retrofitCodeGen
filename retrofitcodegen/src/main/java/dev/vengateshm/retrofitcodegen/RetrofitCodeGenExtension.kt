@@ -1,4 +1,4 @@
-package dev.vengateshm.retrofit_code_gen
+package dev.vengateshm.retrofitcodegen
 
 import org.gradle.api.model.ObjectFactory
 import org.gradle.api.provider.Property

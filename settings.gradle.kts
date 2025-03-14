@@ -19,9 +19,17 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         mavenLocal()
+        maven {
+            url = uri("https://maven.pkg.github.com/vengateshm/retrofitCodeGen")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR") ?: ""
+                password =
+                    System.getenv("GITHUB_TOKEN") ?: ""
+            }
+        }
     }
 }
 
 rootProject.name = "AutoGenerateRetrofitAPICode"
 include(":app")
-include(":retrofit_code_gen")
+include(":retrofitcodegen")

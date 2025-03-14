@@ -1,6 +1,6 @@
-package dev.vengateshm.retrofit_code_gen.generators
+package dev.vengateshm.retrofitcodegen.generators
 
-import dev.vengateshm.retrofit_code_gen.models.Config
+import dev.vengateshm.retrofitcodegen.models.Config
 import org.gradle.api.Project
 
 object CodeGenerator {
