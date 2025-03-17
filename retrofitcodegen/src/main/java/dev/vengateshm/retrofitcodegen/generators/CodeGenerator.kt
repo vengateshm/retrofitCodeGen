@@ -10,8 +10,9 @@ object CodeGenerator {
         packageName: String,
         dirName: String,
     ) {
-        val outputDir = project.layout.buildDirectory.dir("generated/retrofitCodeGen")
-            .get().asFile.also { it.mkdirs() }
+        val outputDir =
+            project.layout.buildDirectory.dir("generated/retrofitCodeGen")
+                .get().asFile.also { it.mkdirs() }
         val fullPackageName = "$packageName.$dirName"
 
         config.models.forEach { (modelName, properties) ->

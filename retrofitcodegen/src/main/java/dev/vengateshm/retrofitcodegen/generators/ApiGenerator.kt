@@ -21,10 +21,11 @@ object ApiGenerator {
                 .addModifiers(KModifier.PUBLIC)
 
         config.endpoints.forEach { endPoint ->
-            val functionBuilder = FunSpec.builder(endPoint.name)
-                .addModifiers(KModifier.ABSTRACT)
-                .addModifiers(KModifier.SUSPEND) // ✅ Make function suspend
-                .returns(TypeUtils.getType(endPoint.responseModel, packageName))
+            val functionBuilder =
+                FunSpec.builder(endPoint.name)
+                    .addModifiers(KModifier.ABSTRACT)
+                    .addModifiers(KModifier.SUSPEND) // ✅ Make function suspend
+                    .returns(TypeUtils.getType(endPoint.responseModel, packageName))
 
             val httpAnnotation =
                 when (endPoint.method) {
@@ -49,12 +50,12 @@ object ApiGenerator {
                     ParameterSpec.builder(pathVariable, STRING)
                         .addAnnotation(
                             AnnotationSpec.builder(
-                                ClassName("retrofit2.http", "Path")
+                                ClassName("retrofit2.http", "Path"),
                             )
                                 .addMember("%S", pathVariable) // ✅ Adds @Path("id") annotation
                                 .build(),
                         )
-                        .build()
+                        .build(),
                 )
             }
 

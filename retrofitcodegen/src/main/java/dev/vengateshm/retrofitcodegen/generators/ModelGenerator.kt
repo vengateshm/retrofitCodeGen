@@ -32,7 +32,7 @@ object ModelGenerator {
                             AnnotationSpec.builder(ClassName("kotlinx.serialization", "SerialName"))
                                 .addMember("%S", propName)
                                 .build(),
-                        )// Add @SerialName annotation
+                        ) // Add @SerialName annotation
                         .build(),
                 )
             primaryConstructor.addParameter(propName, type)

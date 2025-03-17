@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
     alias(libs.plugins.kotlinx.serialization)
-    id("io.github.vengateshm.retrofitcodegen") version "1.0.1"
+    id("io.github.vengateshm.retrofitCodeGen") version "1.0.0"
 }
 
 android {
@@ -27,7 +27,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -45,10 +45,10 @@ android {
     sourceSets["main"].java.srcDirs("build/generated/retrofitCodeGen")
 }
 
-retrofitCodeGenConfig {
+ retrofitCodeGenConfig {
     path = project.rootProject.layout.projectDirectory.dir("api_configs").asFile.absolutePath
     packageAlias = android.namespace!!
-}
+ }
 
 dependencies {
 // Core Dependencies

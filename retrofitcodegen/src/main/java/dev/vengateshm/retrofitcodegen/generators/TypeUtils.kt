@@ -18,8 +18,8 @@ object TypeUtils {
                 ClassName("kotlin.collections", "List").parameterizedBy(
                     getType(
                         itemType,
-                        packageName
-                    )
+                        packageName,
+                    ),
                 )
             }
 

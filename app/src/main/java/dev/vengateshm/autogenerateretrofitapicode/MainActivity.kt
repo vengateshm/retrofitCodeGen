@@ -10,14 +10,14 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import dev.vengateshm.autogenerateretrofitapicode.ui.theme.AutoGenerateRetrofitAPICodeTheme
-import dev.vengateshm.autogenerateretrofitapicode.users.models.User
+ import dev.vengateshm.autogenerateretrofitapicode.users.models.User
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

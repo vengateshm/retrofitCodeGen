@@ -19,13 +19,14 @@ class RetrofitCodeGenPlugin : Plugin<Project> {
 
     private fun initCodeGeneration(
         project: Project,
-        extension: RetrofitCodeGenExtension
+        extension: RetrofitCodeGenExtension,
     ) {
         val configFilesFolder = File(extension.path)
         if (configFilesFolder.exists() && configFilesFolder.isDirectory) {
-            val configFiles = configFilesFolder.listFiles { file ->
-                file.name.matches(Regex("^[a-zA-Z0-9_]+_config\\.json$"))
-            }
+            val configFiles =
+                configFilesFolder.listFiles { file ->
+                    file.name.matches(Regex("^[a-zA-Z0-9_]+_config\\.json$"))
+                }
             println("RetrofitCodeGen: Found ${configFiles?.size ?: 0} valid config files in $configFilesFolder")
 
             configFiles?.forEach { file ->
